@@ -1,3 +1,20 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one or more
+ * contributor license agreements.  See the NOTICE file distributed with
+ * this work for additional information regarding copyright ownership.
+ * The ASF licenses this file to You under the Apache License, Version 2.0
+ * (the "License"); you may not use this file except in compliance with
+ * the License.  You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package link.thingscloud.mobile.area.impl;
 
 import link.thingscloud.mobile.area.MobileArea;
@@ -10,7 +27,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * <p>MobileAreaImpl class.</p>
+ *
  * @author : zhouhailin
+ * @version $Id: $Id
  */
 @Slf4j
 public class MobileAreaImpl implements MobileArea {
@@ -18,10 +38,16 @@ public class MobileAreaImpl implements MobileArea {
     private final Map<String, Area> areaMap = new HashMap<>(1024);
     private final Map<String, Area> mobileAreaMap = new HashMap<>(1024 * 400);
 
+    /**
+     * <p>Constructor for MobileAreaImpl.</p>
+     */
     public MobileAreaImpl() {
         load("/mobile-area-20200313.csv");
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public Area getArea(String mobileNo) {
         if (mobileNo == null || mobileNo.length() < 11) {
@@ -30,6 +56,9 @@ public class MobileAreaImpl implements MobileArea {
         return mobileAreaMap.get(mobileNo.substring(mobileNo.length() - 11, mobileNo.length() - 4));
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public String getMobileNumber(String mobileNo, String areaCode) {
         if (mobileNo == null || mobileNo.length() < 11) {
@@ -43,6 +72,9 @@ public class MobileAreaImpl implements MobileArea {
         return "0" + mobileNo.substring(length - 11);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean isSameArea(String mobileNo, String areaCode) {
         Area area = getArea(mobileNo);
@@ -94,6 +126,11 @@ public class MobileAreaImpl implements MobileArea {
         }
     }
 
+    /**
+     * <p>main.</p>
+     *
+     * @param args an array of {@link java.lang.String} objects.
+     */
     public static void main(String[] args) {
         new MobileAreaImpl();
     }
