@@ -27,6 +27,7 @@
 
     <name>thingscloud-mobile-area-${project.version}</name>
     <description>Mobile Phone Area(手机号码归属地)</description>
+    <url>https://github.com/zhouhailin/thingscloud-mobile-area</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
