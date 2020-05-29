@@ -113,8 +113,8 @@ public class MobileAreaImpl implements MobileArea {
         } finally {
             close(bufferedReader);
         }
-        log.info("mobile area load resource successful.");
-        log.info("getArea mobile number : 1512100xxxx, area : {}", getArea("1512100"));
+        log.info("mobile area load resource successful, area size : {}, mobileArea size : {}.", areaMap.size(), mobileAreaMap.size());
+        log.info("getArea mobile number : 1512100xxxx, area : {}", getArea("1512100xxxx"));
     }
 
     private void close(Closeable closeable) {

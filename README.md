@@ -8,10 +8,13 @@
 
     <dependency>
         <groupId>link.thingscloud</groupId>
-        <artifactId>thingscloud-mobile-area</artifactId>
-        <version>1.0.0-RELEASE</version>
+        <artifactId>mobile-area</artifactId>
+        <version>1.1.0-RELEASE</version>
     </dependency>
 
+## 归属地更新记录
+
+    1.1.0-RELEASE : 2020-03-13
 
 ## 使用
     // 获取号码区域 : 区号/省份/地市

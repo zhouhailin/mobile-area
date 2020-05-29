@@ -22,10 +22,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>link.thingscloud</groupId>
-    <artifactId>thingscloud-mobile-area</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <artifactId>mobile-area</artifactId>
+    <version>1.1.0-RELEASE</version>
 
-    <name>thingscloud-mobile-area-${project.version}</name>
+    <name>mobile-area-${project.version}</name>
     <description>Mobile Phone Area(手机号码归属地)</description>
     <url>https://github.com/zhouhailin/thingscloud-mobile-area</url>
 
@@ -44,7 +44,7 @@
         <url>https://github.com/zhouhailin/thingscloud-mobile-area</url>
         <connection>scm:git:https://github.com/zhouhailin/thingscloud-mobile-area.git</connection>
         <developerConnection>scm:git:https://github.com/zhouhailin/thingscloud-mobile-area.git</developerConnection>
-        <tag>1.0.0-BETA</tag>
+        <tag>1.1.0-RELEASE</tag>
     </scm>
 
     <licenses>
