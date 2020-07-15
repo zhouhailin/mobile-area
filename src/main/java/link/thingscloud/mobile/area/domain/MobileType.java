@@ -46,6 +46,10 @@ public enum MobileType {
      */
     CTCC,
     /**
+     * 中国卫通 - 中国卫星通信
+     */
+    CSCC,
+    /**
      * 中国移动通信
      */
     V_CMCC,

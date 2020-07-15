@@ -18,6 +18,7 @@
 package link.thingscloud.mobile.area;
 
 import link.thingscloud.mobile.area.domain.Area;
+import link.thingscloud.mobile.area.domain.MobileType;
 
 /**
  * <p>MobileArea interface.</p>
@@ -34,6 +35,14 @@ public interface MobileArea {
      * @return a {@link link.thingscloud.mobile.area.domain.Area} object.
      */
     Area getArea(String mobileNo);
+
+    /**
+     * <p>getMobileType.</p>
+     *
+     * @param mobileNo a {@link java.lang.String} object.
+     * @return a {@link link.thingscloud.mobile.area.domain.MobileType} object.
+     */
+    MobileType getMobileType(String mobileNo);
 
     /**
      * <p>getMobileNumber.</p>
