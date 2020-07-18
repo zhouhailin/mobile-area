@@ -30,7 +30,7 @@
     MobileArea.getInstance().isSameArea("915121001234", "020");
     MobileArea.getInstance().isSameArea("9015121007938", "021");
     
-    // 判断手机号码运营商 ：移动，联通，电信，电信虚拟运营商，联通虚拟运营商，移动虚拟运营商
+    // 判断手机号码运营商 ：移动，联通，电信，卫通，电信虚拟运营商，联通虚拟运营商，移动虚拟运营商
     MobileType getMobileType("1521001234")
     
 ## License
