@@ -27,7 +27,7 @@
 
     <name>mobile-area-${project.version}</name>
     <description>Mobile Phone Area(手机号码归属地)</description>
-    <url>https://github.com/zhouhailin/thingscloud-mobile-area</url>
+    <url>https://github.com/zhouhailin/mobile-area</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -41,9 +41,9 @@
     </properties>
 
     <scm>
-        <url>https://github.com/zhouhailin/thingscloud-mobile-area</url>
-        <connection>scm:git:https://github.com/zhouhailin/thingscloud-mobile-area.git</connection>
-        <developerConnection>scm:git:https://github.com/zhouhailin/thingscloud-mobile-area.git</developerConnection>
+        <url>https://github.com/zhouhailin/mobile-area</url>
+        <connection>scm:git:https://github.com/zhouhailin/mobile-area.git</connection>
+        <developerConnection>scm:git:https://github.com/zhouhailin/mobile-area.git</developerConnection>
         <tag>1.2.0-RELEASE</tag>
     </scm>
 
