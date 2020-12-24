@@ -9,15 +9,20 @@
     <dependency>
         <groupId>link.thingscloud</groupId>
         <artifactId>mobile-area</artifactId>
-        <version>1.2.0-RELEASE</version>
+        <version>1.3.0-RELEASE</version>
     </dependency>
 
 ## 归属地更新记录
 
     1.1.0-RELEASE : 2020-03-13
     1.2.0-RELEASE : 2020-07-18
+    1.3.0-RELEASE : 2020-12-24
 
 ## 使用
+
+    // 获取号码区域 : 区号/省份/地市
+    MobileArea.getInstance().getArea0("021");
+
     // 获取号码区域 : 区号/省份/地市
     MobileArea.getInstance().getArea("15121001234");
     MobileArea.getInstance().getArea("0015121001234"));
