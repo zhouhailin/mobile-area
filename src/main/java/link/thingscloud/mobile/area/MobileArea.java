@@ -29,6 +29,14 @@ import link.thingscloud.mobile.area.domain.MobileType;
 public interface MobileArea {
 
     /**
+     * 根据区号获取区域信息
+     *
+     * @param code {@link java.lang.String} 区号.
+     * @return {@link link.thingscloud.mobile.area.domain.Area} 区域信息.
+     */
+    Area getArea0(String code);
+
+    /**
      * <p>getArea.</p>
      *
      * @param mobileNo a {@link java.lang.String} object.

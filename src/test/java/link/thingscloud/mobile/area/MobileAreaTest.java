@@ -25,6 +25,13 @@ import org.junit.Test;
 public class MobileAreaTest {
 
     @Test
+    public void getArea0() {
+        System.out.println(MobileArea.getInstance().getArea0("021"));
+        System.out.println(MobileArea.getInstance().getArea0("0530"));
+        System.out.println(MobileArea.getInstance().getArea0("05301"));
+    }
+
+    @Test
     public void getArea() {
         System.out.println(MobileArea.getInstance().getArea("15121001234"));
         System.out.println(MobileArea.getInstance().getArea("0015121001234"));

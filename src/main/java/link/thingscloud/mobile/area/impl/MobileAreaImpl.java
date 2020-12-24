@@ -59,6 +59,14 @@ public class MobileAreaImpl implements MobileArea {
      * {@inheritDoc}
      */
     @Override
+    public Area getArea0(String code) {
+        return areaMap.get(code);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
     public Area getArea(String mobileNo) {
         if (mobileNo == null || mobileNo.length() < 11) {
             return null;
