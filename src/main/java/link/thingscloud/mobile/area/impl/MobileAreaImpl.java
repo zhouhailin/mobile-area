@@ -52,7 +52,7 @@ public class MobileAreaImpl implements MobileArea {
      */
     public MobileAreaImpl() {
         load0();
-        load("/mobile-area-20200313.csv");
+        load0("classpath:/mobile-area-20200313.csv");
     }
 
     /**
@@ -124,6 +124,11 @@ public class MobileAreaImpl implements MobileArea {
         return area.getCode().equals(areaCode);
     }
 
+    @Override
+    public void load(String resourceFileName) {
+        load0(resourceFileName);
+    }
+
     private String trimMobileNo(String mobileNo) {
         if (mobileNo == null || mobileNo.length() < 11) {
             return mobileNo;
@@ -170,12 +175,17 @@ public class MobileAreaImpl implements MobileArea {
         corpMap.putAll(builder.build());
     }
 
-    private void load(String resourceFileName) {
+    private void load0(String resourceFileName) {
         log.info("mobile area load resource file name : {}", resourceFileName);
 
         BufferedReader bufferedReader = null;
-        InputStream inputStream = MobileAreaImpl.class.getResourceAsStream(resourceFileName);
+        InputStream inputStream = null;
         try {
+            if (resourceFileName.startsWith("classpath:")) {
+                inputStream = MobileAreaImpl.class.getResourceAsStream(resourceFileName.replace("classpath:", ""));
+            } else {
+                inputStream = new FileInputStream(resourceFileName);
+            }
             InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
             bufferedReader = new BufferedReader(reader);
             String line;

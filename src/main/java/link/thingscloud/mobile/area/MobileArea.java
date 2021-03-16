@@ -71,6 +71,13 @@ public interface MobileArea {
     boolean isSameArea(String mobileNo, String areaCode);
 
     /**
+     * 加载外部资源文件
+     *
+     * @param resourceFileName 资源文件名称
+     */
+    void load(String resourceFileName);
+
+    /**
      * <p>getInstance.</p>
      *
      * @return a {@link link.thingscloud.mobile.area.MobileArea} object.
@@ -78,5 +85,4 @@ public interface MobileArea {
     static MobileArea getInstance() {
         return MobileAreaFactory.getInstance();
     }
-
 }

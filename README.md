@@ -9,7 +9,7 @@
     <dependency>
         <groupId>link.thingscloud</groupId>
         <artifactId>mobile-area</artifactId>
-        <version>1.3.0-RELEASE</version>
+        <version>1.4.0-RELEASE</version>
     </dependency>
 
 ## 归属地更新记录
@@ -17,6 +17,14 @@
     1.1.0-RELEASE : 2020-03-13
     1.2.0-RELEASE : 2020-07-18
     1.3.0-RELEASE : 2020-12-24
+
+## 支持外部资源加载
+
+格式: 号段,区号,省会,地市
+
+```
+1300001,0519,江苏,常州
+```
 
 ## 使用
 
