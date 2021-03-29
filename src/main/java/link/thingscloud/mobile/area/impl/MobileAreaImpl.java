@@ -44,7 +44,7 @@ public class MobileAreaImpl implements MobileArea {
      */
     private final Map<String, MobileType> corpMap = new HashMap<>();
 
-    private final Map<String, Area> areaMap = new HashMap<>(1024);
+    public final Map<String, Area> areaMap = new HashMap<>(1024);
     private final Map<String, Area> mobileAreaMap = new HashMap<>(1024 * 400);
 
     /**
@@ -52,7 +52,7 @@ public class MobileAreaImpl implements MobileArea {
      */
     public MobileAreaImpl() {
         load0();
-        load0("classpath:/mobile-area-20200313.csv");
+        load0("classpath:/mobile-area-20210329.csv");
     }
 
     /**
@@ -153,13 +153,13 @@ public class MobileAreaImpl implements MobileArea {
         builder.put("1340", CMCC).put("1341", CMCC).put("1342", CMCC)
                 .put("1343", CMCC).put("1344", CMCC).put("1345", CMCC)
                 .put("1346", CMCC).put("1347", CMCC).put("1348", CMCC)
-                .put("135", CMCC).put("136", CMCC).put("137", CMCC)
-                .put("138", CMCC).put("139", CMCC).put("147", CMCC)
-                .put("150", CMCC).put("151", CMCC).put("152", CMCC)
-                .put("157", CMCC).put("158", CMCC).put("159", CMCC)
+                .put("135", CMCC).put("136", CMCC).put("137", CMCC).put("138", CMCC).put("139", CMCC)
+                .put("147", CMCC)
+                .put("150", CMCC).put("151", CMCC).put("152", CMCC).put("157", CMCC).put("158", CMCC).put("159", CMCC)
+                .put("165", CMCC)
                 .put("172", CMCC).put("178", CMCC).put("182", CMCC)
-                .put("183", CMCC).put("184", CMCC).put("187", CMCC)
-                .put("188", CMCC).put("198", CMCC);
+                .put("183", CMCC).put("184", CMCC).put("187", CMCC).put("188", CMCC)
+                .put("198", CMCC);
 
         // 卫星通信
         builder.put("1349", CSCC);
@@ -197,8 +197,11 @@ public class MobileAreaImpl implements MobileArea {
                     String areaCode = strs[1];
                     Area area0 = areaMap.get(areaCode);
                     if (area0 == null) {
-                        area0 = new Area().setCode(areaCode).setProvince(strs[2]).setCity(strs[3]);
+                        area0 = new Area().setCode(areaCode).setProvince(strs[2]);
+                        area0.getCitys().add(strs[3]);
                         areaMap.put(areaCode, area0);
+                    } else {
+                        area0.getCitys().add(strs[3]);
                     }
                     mobileAreaMap.put(mobileNumber, area0);
                 }

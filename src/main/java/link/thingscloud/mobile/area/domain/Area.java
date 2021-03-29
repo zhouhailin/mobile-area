@@ -20,6 +20,9 @@ package link.thingscloud.mobile.area.domain;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  * <p>Area class.</p>
  *
@@ -40,5 +43,5 @@ public class Area {
     /**
      * 地市
      */
-    private String city;
+    private Set<String> citys = new HashSet<>(4);
 }
