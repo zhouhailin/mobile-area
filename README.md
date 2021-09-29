@@ -9,15 +9,17 @@
     <dependency>
         <groupId>link.thingscloud</groupId>
         <artifactId>mobile-area</artifactId>
-        <version>1.4.0-RELEASE</version>
+        <version>2021.09.30</version>
     </dependency>
 
 ## 归属地更新记录
 
-    1.1.0-RELEASE : 2020-03-13
-    1.2.0-RELEASE : 2020-07-18
-    1.3.0-RELEASE : 2020-12-24
-    1.5.0-RELEASE : 2021-03-29
+    更新记录见版本日期
+    
+## 文本内容说明
+
+### 全国行政区划信息
+
 
 ## 支持外部资源加载
 
@@ -29,23 +31,15 @@
 
 ## 使用
 
-    // 获取号码区域 : 区号/省份/地市
-    MobileArea.getInstance().getArea0("021");
+    // 获取号码信息
+    MobileUtil.getMobile("15121001234");
+    MobileUtil.getMobile("0015121001234"));
+    
+    // 获取号码对应的省、市, 其中市会存在多个市同一个区号
+    MobileUtil.getArea("0015121001234"));
 
-    // 获取号码区域 : 区号/省份/地市
-    MobileArea.getInstance().getArea("15121001234");
-    MobileArea.getInstance().getArea("0015121001234"));
-    
-    // 获取外呼号码-如果不同区域会自动加 0
-    MobileArea.getInstance().getMobileNumber("15121001234", "020");
-    MobileArea.getInstance().getMobileNumber("+915121001234", "021");
-    
-    // 是否是指定区域
-    MobileArea.getInstance().isSameArea("915121001234", "020");
-    MobileArea.getInstance().isSameArea("9015121007938", "021");
-    
     // 判断手机号码运营商 ：移动，联通，电信，卫通，电信虚拟运营商，联通虚拟运营商，移动虚拟运营商
-    MobileType getMobileType("1521001234")
+    Type getType("1521001234")
     
 ## License
 

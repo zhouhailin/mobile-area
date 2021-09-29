@@ -18,71 +18,25 @@
 package link.thingscloud.mobile.area;
 
 import link.thingscloud.mobile.area.domain.Area;
-import link.thingscloud.mobile.area.domain.MobileType;
+import link.thingscloud.mobile.area.domain.Mobile;
+import link.thingscloud.mobile.area.domain.Type;
 
 /**
  * <p>MobileArea interface.</p>
  *
  * @author : zhouhailin
- * @version $Id: $Id
+ * @version 2.0.0
  */
 public interface MobileArea {
 
-    /**
-     * 根据区号获取区域信息
-     *
-     * @param code {@link java.lang.String} 区号.
-     * @return {@link link.thingscloud.mobile.area.domain.Area} 区域信息.
-     */
-    Area getArea0(String code);
-
-    /**
-     * <p>getArea.</p>
-     *
-     * @param mobileNo a {@link java.lang.String} object.
-     * @return a {@link link.thingscloud.mobile.area.domain.Area} object.
-     */
-    Area getArea(String mobileNo);
-
-    /**
-     * <p>getMobileType.</p>
-     *
-     * @param mobileNo a {@link java.lang.String} object.
-     * @return a {@link link.thingscloud.mobile.area.domain.MobileType} object.
-     */
-    MobileType getMobileType(String mobileNo);
-
-    /**
-     * <p>getMobileNumber.</p>
-     *
-     * @param mobileNo a {@link java.lang.String} object.
-     * @param areaCode a {@link java.lang.String} object.
-     * @return a {@link java.lang.String} object.
-     */
-    String getMobileNumber(String mobileNo, String areaCode);
-
-    /**
-     * <p>isSameArea.</p>
-     *
-     * @param mobileNo a {@link java.lang.String} object.
-     * @param areaCode a {@link java.lang.String} object.
-     * @return a boolean.
-     */
-    boolean isSameArea(String mobileNo, String areaCode);
-
-    /**
-     * 加载外部资源文件
-     *
-     * @param resourceFileName 资源文件名称
-     */
-    void load(String resourceFileName);
-
-    /**
-     * <p>getInstance.</p>
-     *
-     * @return a {@link link.thingscloud.mobile.area.MobileArea} object.
-     */
     static MobileArea getInstance() {
         return MobileAreaFactory.getInstance();
     }
+
+    Mobile getMobile(String mobileNo);
+
+    Area getArea(String mobileNo);
+
+    Type getType(String mobileNo);
+
 }

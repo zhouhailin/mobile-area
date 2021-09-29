@@ -20,28 +20,21 @@ package link.thingscloud.mobile.area.domain;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
-import java.util.HashSet;
-import java.util.Set;
-
 /**
  * <p>Area class.</p>
  *
  * @author : zhouhailin
- * @version $Id: $Id
+ * @version 2.0
  */
 @Data
 @Accessors(chain = true)
 public class Area {
     /**
-     * 区号
-     */
-    private String code;
-    /**
      * 省份
      */
-    private String province;
+    private final String province;
     /**
      * 地市
      */
-    private Set<String> citys = new HashSet<>(4);
+    private final String cities;
 }

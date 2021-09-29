@@ -27,9 +27,11 @@ import link.thingscloud.mobile.area.impl.MobileAreaImpl;
  */
 public class MobileAreaFactory {
 
-    private static final MobileArea MOBILE_AREA = new MobileAreaImpl();
-
     private MobileAreaFactory() {
+    }
+
+    private static class Instance {
+        private static final MobileArea MOBILE_AREA = new MobileAreaImpl();
     }
 
     /**
@@ -38,6 +40,6 @@ public class MobileAreaFactory {
      * @return a {@link link.thingscloud.mobile.area.MobileArea} object.
      */
     public static MobileArea getInstance() {
-        return MOBILE_AREA;
+        return Instance.MOBILE_AREA;
     }
 }

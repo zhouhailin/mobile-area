@@ -29,7 +29,8 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class Mobile {
-    private String number;
-    private MobileType type;
-    private Area area;
+    private final String number;
+    private final Type type;
+    private final Area area;
+    private final String desc;
 }
