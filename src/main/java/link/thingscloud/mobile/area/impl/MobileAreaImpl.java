@@ -46,7 +46,7 @@ public class MobileAreaImpl implements MobileArea {
     private final Map<String, Type> typeMap = new HashMap<>();
     private final Map<String, Mobile> mobileMap = new HashMap<>(1024 * 400);
 
-    private static final String MOBILE_RESOURCE_FILE = "classpath:/mobile-20210930.csv";
+    private static final String MOBILE_RESOURCE_FILE = "classpath:/mobile-20211001.csv";
 
     /**
      * <p>Constructor for MobileAreaImpl.</p>
@@ -138,20 +138,18 @@ public class MobileAreaImpl implements MobileArea {
 
     private void loadMobile() {
         long start = System.currentTimeMillis();
-        log.debug("load mobile area resource file name : {}", MOBILE_RESOURCE_FILE);
-
         final Map<String, Area> areaMap = new HashMap<>();
-
         BufferedReader bufferedReader = null;
         try {
             InputStream inputStream = MobileAreaImpl.class.getResourceAsStream(MOBILE_RESOURCE_FILE.replace("classpath:", ""));
             InputStreamReader reader = new InputStreamReader(inputStream, StandardCharsets.UTF_8);
             bufferedReader = new BufferedReader(reader);
             String line;
+            // 1790001,北京,北京,
             // 1300000,山东,济南,联通
             while ((line = bufferedReader.readLine()) != null) {
                 String[] strs = line.split(",");
-                if (strs.length == 4) {
+                if (strs.length == 4||strs.length == 3 ) {
                     Type type = getType0(strs[0]);
                     if (type == null) {
                         log.error("not found type for : {}", line);
@@ -160,17 +158,21 @@ public class MobileAreaImpl implements MobileArea {
                     Area area = areaMap.get(strs[1] + "," + strs[2]);
                     if (area == null) {
                         area = new Area(strs[1], strs[2]);
-                        areaMap.put(strs[2] + "," + strs[3], area);
+                        areaMap.put(strs[1] + "," + strs[2], area);
                     }
-                    mobileMap.put(strs[0], new Mobile(strs[0], type, area, strs[3]));
+                    if (strs.length == 4) {
+                        mobileMap.put(strs[0], new Mobile(strs[0], type, area, strs[3]));
+                    } else {
+                        mobileMap.put(strs[0], new Mobile(strs[0], type, area, ""));
+                    }
                 }
             }
         } catch (IOException e) {
-            log.error("load mobile area resource [{}] failed, cause : ", MOBILE_RESOURCE_FILE, e);
+            log.error("load resource [{}] failed, cause : ", MOBILE_RESOURCE_FILE, e);
         } finally {
             close(bufferedReader);
         }
-        log.info("load mobile area resource file name : {}, mobile size : {}, area size : {}, type size : {}, use {} ms.", MOBILE_RESOURCE_FILE, mobileMap.size(), areaMap.size(), typeMap.size(), System.currentTimeMillis() - start);
+        log.info("load resource file name : {}, mobile size : {}, area size : {}, type size : {}, used {} ms.", MOBILE_RESOURCE_FILE, mobileMap.size(), areaMap.size(), typeMap.size(), System.currentTimeMillis() - start);
     }
 
     private void close(Closeable closeable) {

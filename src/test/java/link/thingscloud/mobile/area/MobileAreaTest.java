@@ -17,7 +17,11 @@
 
 package link.thingscloud.mobile.area;
 
+import link.thingscloud.mobile.area.domain.Mobile;
+import link.thingscloud.mobile.area.domain.Type;
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author : zhouhailin
@@ -26,8 +30,47 @@ public class MobileAreaTest {
 
     @Test
     public void getMobile() {
-        System.out.println(MobileArea.getInstance().getMobile("15121001234"));
-        System.out.println(MobileArea.getInstance().getMobile("0015121001234"));
+        // 1969019,新疆,喀什,联通
+        Mobile mobile = MobileArea.getInstance().getMobile("19690191234");
+        System.out.println(mobile);
+        assertEquals(mobile.getType(), Type.CUCC);
+        assertEquals(mobile.getArea().getProvince(), "新疆");
+        assertEquals(mobile.getArea().getCities(), "喀什");
+
+        //1980000,北京,北京,移动
+        mobile = MobileArea.getInstance().getMobile("19800001234");
+        System.out.println(mobile);
+        assertEquals(mobile.getType(), Type.CMCC);
+        assertEquals(mobile.getArea().getProvince(), "北京");
+        assertEquals(mobile.getArea().getCities(), "北京");
+
+        // 1980382,河南,郑州,移动
+        mobile = MobileArea.getInstance().getMobile("19803821234");
+        System.out.println(mobile);
+        assertEquals(mobile.getType(), Type.CMCC);
+        assertEquals(mobile.getArea().getProvince(), "河南");
+        assertEquals(mobile.getArea().getCities(), "郑州");
+
+        // 1981073,安徽,滁州,移动
+        mobile = MobileArea.getInstance().getMobile("19810731234");
+        System.out.println(mobile);
+        assertEquals(mobile.getType(), Type.CMCC);
+        assertEquals(mobile.getArea().getProvince(), "安徽");
+        assertEquals(mobile.getArea().getCities(), "滁州");
+
+        // 1981319,云南,普洱,移动
+        mobile = MobileArea.getInstance().getMobile("1981319");
+        System.out.println(mobile);
+        assertEquals(mobile.getType(), Type.CMCC);
+        assertEquals(mobile.getArea().getProvince(), "云南");
+        assertEquals(mobile.getArea().getCities(), "普洱");
+
+        // 1300695,广西,玉林,联通
+        mobile = MobileArea.getInstance().getMobile("1300695");
+        System.out.println(mobile);
+        assertEquals(mobile.getType(), Type.CUCC);
+        assertEquals(mobile.getArea().getProvince(), "广西");
+        assertEquals(mobile.getArea().getCities(), "玉林");
     }
 
     @Test
