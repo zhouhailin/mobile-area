@@ -9,8 +9,12 @@
     <dependency>
         <groupId>link.thingscloud</groupId>
         <artifactId>mobile-area</artifactId>
-        <version>2021.10.01</version>
+        <version>2021.10.04</version>
     </dependency>
+
+## 归属地更新记录
+
+    JVM内存占用160M左右
 
 ## 归属地更新记录
 

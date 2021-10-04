@@ -71,6 +71,9 @@ public class MobileAreaTest {
         assertEquals(mobile.getType(), Type.CUCC);
         assertEquals(mobile.getArea().getProvince(), "广西");
         assertEquals(mobile.getArea().getCities(), "玉林");
+
+
+        println();
     }
 
     @Test
@@ -88,5 +91,27 @@ public class MobileAreaTest {
     @Test
     public void loadTest() {
         System.out.println("1512100".substring(0, 4));
+    }
+
+    public static void println() {
+        System.out.println("------------------------------------");
+        System.gc();
+        Runtime run = Runtime.getRuntime();
+        long max = run.maxMemory();
+        long total = run.totalMemory();
+        long free = run.freeMemory();
+        long usable = max - total + free;
+        System.out.println("最大内存 = " + (max / 1024 / 1024));
+        System.out.println("已分配内存 = " + (total / 1024 / 1024));
+        System.out.println("已分配内存中的剩余空间 = " + (free / 1024 / 1024));
+        System.out.println("最大可用内存 = " + (usable / 1024 / 1024));
+    }
+
+    public static void main(String[] args) {
+        println();
+        // 1969019,新疆,喀什,联通
+        Mobile mobile = MobileArea.getInstance().getMobile("19690191234");
+        System.out.println(mobile);
+        println();
     }
 }
