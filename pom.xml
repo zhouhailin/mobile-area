@@ -23,7 +23,7 @@
 
     <groupId>link.thingscloud</groupId>
     <artifactId>mobile-area</artifactId>
-    <version>2021.10.04</version>
+    <version>2021.10.30</version>
 
     <name>mobile-area-${project.version}</name>
     <description>Mobile Phone Area(手机号码归属地)</description>
@@ -45,7 +45,7 @@
         <url>https://github.com/zhouhailin/mobile-area</url>
         <connection>scm:git:https://github.com/zhouhailin/mobile-area.git</connection>
         <developerConnection>scm:git:https://github.com/zhouhailin/mobile-area.git</developerConnection>
-        <tag>2021.10.04</tag>
+        <tag>2021.10.30</tag>
     </scm>
 
     <licenses>
