@@ -36,5 +36,5 @@ public class Area {
     /**
      * 地市
      */
-    private final String cities;
+    private final String city;
 }

@@ -9,7 +9,7 @@
     <dependency>
         <groupId>link.thingscloud</groupId>
         <artifactId>mobile-area</artifactId>
-        <version>2021.11.30</version>
+        <version>2022.01.20</version>
     </dependency>
 
 ## 更新记录
