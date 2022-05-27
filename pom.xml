@@ -23,7 +23,7 @@
 
     <groupId>link.thingscloud</groupId>
     <artifactId>mobile-area</artifactId>
-    <version>2022.01.20</version>
+    <version>2022.05.24</version>
 
     <name>mobile-area-${project.version}</name>
     <description>Mobile Phone Area(手机号码归属地)</description>
@@ -45,7 +45,7 @@
         <url>https://github.com/zhouhailin/mobile-area</url>
         <connection>scm:git:https://github.com/zhouhailin/mobile-area.git</connection>
         <developerConnection>scm:git:https://github.com/zhouhailin/mobile-area.git</developerConnection>
-        <tag>2022.01.20</tag>
+        <tag>2022.05.24</tag>
     </scm>
 
     <licenses>
@@ -66,24 +66,24 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.32</version>
+            <version>1.7.36</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>1.2.10</version>
+            <version>1.2.11</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.10</version>
+            <version>1.2.11</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.22</version>
+            <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
