@@ -46,7 +46,7 @@ public class MobileAreaImpl implements MobileArea {
     private final Map<String, Type> typeMap = new HashMap<>();
     private final Map<String, Mobile> mobileMap = new HashMap<>(1024 * 400);
 
-    private static final String MOBILE_RESOURCE_FILE = "classpath:/mobile-20220524.csv";
+    private static final String MOBILE_RESOURCE_FILE = "classpath:/mobile-20220720.csv";
 
     /**
      * <p>Constructor for MobileAreaImpl.</p>
