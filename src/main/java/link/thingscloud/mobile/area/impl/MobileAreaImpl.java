@@ -152,8 +152,9 @@ public class MobileAreaImpl implements MobileArea {
                 if (strs.length == 4||strs.length == 3 ) {
                     Type type = getType0(strs[0]);
                     if (type == null) {
+                        type = NONE;
                         log.error("not found type for : {}", line);
-                        continue;
+                        //continue;
                     }
                     Area area = areaMap.get(strs[1] + "," + strs[2]);
                     if (area == null) {
