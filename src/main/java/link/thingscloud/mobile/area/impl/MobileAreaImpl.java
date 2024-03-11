@@ -116,7 +116,10 @@ public class MobileAreaImpl implements MobileArea {
                 .put("165", CMCC)
                 .put("172", CMCC).put("178", CMCC).put("179", CMCC).put("182", CMCC)
                 .put("183", CMCC).put("184", CMCC).put("187", CMCC).put("188", CMCC)
-                .put("195", CMCC).put("198", CMCC);
+                .put("195", CMCC).put("197", CMCC).put("198", CMCC);
+
+        //广电
+        builder.put("192",CBN);
 
         // 卫星通信
         builder.put("1349", CSCC);
