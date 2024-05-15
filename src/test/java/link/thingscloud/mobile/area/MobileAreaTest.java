@@ -73,7 +73,7 @@ public class MobileAreaTest {
         assertEquals(mobile.getArea().getCity(), "玉林");
 
 
-        println();
+//        println();
     }
 
     @Test
@@ -107,14 +107,4 @@ public class MobileAreaTest {
         System.out.println("最大可用内存 = " + (usable / 1024 / 1024));
     }
 
-    public static void main(String[] args) throws InterruptedException {
-        println();
-        // 1969019,新疆,喀什,联通
-        Mobile mobile = MobileArea.getInstance().getMobile("19690191234");
-        System.out.println(mobile);
-        for (int i = 0; i < 10; i++) {
-            Thread.sleep(1000);
-            println();
-        }
-    }
 }
