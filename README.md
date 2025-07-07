@@ -9,11 +9,12 @@
     <dependency>
         <groupId>link.thingscloud</groupId>
         <artifactId>mobile-area</artifactId>
-        <version>2025.01.15</version>
+        <version>2025.07.07</version>
     </dependency>
 
 ## 更新记录
 
+    2025.07.07 : **517258** 条记录
     2025.01.15 : **517258** 条记录
     2024.05.15 : **507456** 条记录
     2024.04.30 : **498273** 条记录

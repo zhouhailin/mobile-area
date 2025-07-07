@@ -93,15 +93,16 @@ public class MobileAreaImpl implements MobileArea {
     private void load0() {
         MapBuilder<String, Type> builder = MapBuilder.newBuilder();
         // 中国电信号段
-        builder.put("133", CTCC).put("149", CTCC).put("153", CTCC)
-                .put("162", CTCC)
+        builder.put("133", CTCC).put("141", CTCC).put("149", CTCC)
+                .put("153", CTCC).put("154", CTCC)
+                .put("161", CTCC).put("162", CTCC).put("163", CTCC).put("164", CTCC).put("168", CTCC).put("169", CTCC)
                 .put("173", CTCC).put("174", CTCC).put("177", CTCC).put("180", CTCC)
                 .put("181", CTCC).put("189", CTCC)
-                .put("190", CTCC).put("191", CTCC).put("193", CTCC).put("199", CTCC);
+                .put("190", CTCC).put("191", CTCC).put("193", CTCC).put("194", CTCC).put("199", CTCC);
 
         // 中国联通
         builder.put("130", CUCC).put("131", CUCC).put("132", CUCC)
-                .put("145", CUCC).put("146", CUCC).put("155", CUCC).put("156", CUCC)
+                .put("140", CUCC).put("145", CUCC).put("146", CUCC).put("155", CUCC).put("156", CUCC)
                 .put("167", CUCC)
                 .put("175", CUCC).put("176", CUCC).put("185", CUCC)
                 .put("186", CUCC).put("166", CUCC).put("196", CUCC);
@@ -111,9 +112,9 @@ public class MobileAreaImpl implements MobileArea {
                 .put("1343", CMCC).put("1344", CMCC).put("1345", CMCC)
                 .put("1346", CMCC).put("1347", CMCC).put("1348", CMCC)
                 .put("135", CMCC).put("136", CMCC).put("137", CMCC).put("138", CMCC).put("139", CMCC)
-                .put("147", CMCC).put("148", CMCC)
+                .put("142", CMCC).put("143", CMCC).put("144", CMCC).put("147", CMCC).put("148", CMCC)
                 .put("150", CMCC).put("151", CMCC).put("152", CMCC).put("157", CMCC).put("158", CMCC).put("159", CMCC)
-                .put("165", CMCC)
+                .put("160", CMCC).put("165", CMCC)
                 .put("172", CMCC).put("178", CMCC).put("179", CMCC).put("182", CMCC)
                 .put("183", CMCC).put("184", CMCC).put("187", CMCC).put("188", CMCC)
                 .put("195", CMCC).put("197", CMCC).put("198", CMCC);
